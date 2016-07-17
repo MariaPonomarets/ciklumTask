@@ -1,0 +1,86 @@
+﻿.oculus {
+  width: 100%;
+  font-family: "Open Sans", "open-sans", sans-serif;
+  margin: 0 auto;
+
+  .img-box {
+    height: 300px;
+    padding: 0;
+
+    .elem {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      height: 100%;
+      transition: all 0.3s;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover > .bg-img {
+        height: 110%;
+      }
+
+      &:hover > .shadow {
+        background: rgba(40,40,40,0.2);
+      }
+
+      .shadow {
+        position: absolute;
+        background: rgba(40,40,40,0.7);
+        width: 100%;
+        height: 100%;
+        transition: background 0.3s;
+        z-index: 2;
+      }
+
+      .bg-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        transition: height 0.3s;
+        z-index: 1;
+      }
+
+      .valkyrie {
+        background-image: url('../img/oculus-valkyrie.jpg');
+      }
+
+      .lucky {
+        background-image: url('../img/oculus-sonik.jpg');
+      }
+
+      .touch {
+        background-image: url('../img/oculus-touch.jpg');
+      }
+
+      .oculus-wrap {
+        position: absolute;
+        top: 50%;
+        width: 90%;
+        transform: translateY(-50%);
+        padding: 0px 5%;
+        z-index: 3;
+
+        h4 {
+          font-size: 12px;
+          line-height: 16px;
+          color: #a4a5a6;
+          text-align: center;
+          font-weight: 600;
+          letter-spacing: 2px;
+        }
+
+        h3 {
+          font-size: 22px;
+          line-height: 28px;
+          text-align: center;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

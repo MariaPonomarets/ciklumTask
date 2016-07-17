@@ -1,6 +1,7 @@
 ﻿$menu-active-color: #f1f1f1;
 $dropdown-color: #f1f1f1;
 $dropdown-color-active: #e5e5e5;
+$dropdown-submenu: #D9D9D9;
 
 .navigetion {
   width: 100%;
@@ -34,11 +35,43 @@ $dropdown-color-active: #e5e5e5;
     background-color: transparent;
     float: left;
     display: block;
+    
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: $dropdown-color;
+      min-width: 220px;
+      width: auto;
+      z-index: 1000;
+      margin-top: 12px;
+      margin-left: -23px;
+    }
+
+    .dropdown-submenu {
+      display: none;
+      position: absolute;
+      background-color: $dropdown-color-active;
+      min-width: 220px;
+      z-index: 1001;
+      top: -48px;
+      margin-left: 197px;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .active {
+      background-color: $dropdown-color;
+      transition: background-color ease-out .5s;
+    }
+
+
 
     ul {
       list-style: none;
       position: relative;
-      float: left;
       margin: 0;
       padding: 0;
 
@@ -46,13 +79,29 @@ $dropdown-color-active: #e5e5e5;
         display: block;
         color: #333;
         text-decoration: none;
+        width: 100%;
+        height: 100%;
+      }
+
+      .float-li {
+        float: left;
+
+        &:hover {
+          background-color: $dropdown-color;
+          transition: background-color ease-out .5s;
+        }
+      }
+
+      .float-li ul li:hover {
+        background-color: $dropdown-color-active;
+        transition: background-color ease-out .5s;
       }
 
       li {
         position: relative;
-        float: left;
         padding: 13px 1.5em 13px 1.5em;
         height: 100%;
+        cursor: pointer;
 
         .glyphicon {
           font-size: 8px;
@@ -63,18 +112,24 @@ $dropdown-color-active: #e5e5e5;
           float: right;
           padding-top: 4px;
         }
-
-        &:hover {
-          background-color: $dropdown-color;
-        }
       }
     }
   }
 
   .nav-wrapper-rigth {
-    @extend .nav-wrapper;
+    width: auto;
+    height: auto;
+    line-height: 23px;
+    position: static;
+    max-width: none;
+    background-color: transparent;
+    display: block;
     float: right;
-
+    .button-menu{
+      width:20px;
+      height:20px;
+      background-image:url('http://www.mettalegal.com/wp-content/uploads/2013/01/menu-icon.png')
+    }
     .shell-search {
       display: block;
       float: left;
@@ -168,5 +223,16 @@ $dropdown-color-active: #e5e5e5;
       color: cornflowerblue;
     }
   }
+
+}
+.hide-elem{
+  display:none;
 }
 
+@media screen and (max-width: 1025px) {
+ .navigetion .nav-wrapper {
+    display: none;
+    }
+    
+  
+}
