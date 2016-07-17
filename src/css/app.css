@@ -163,9 +163,14 @@
     display: block;
     float: right; }
     .navigetion .nav-wrapper-rigth .button-menu {
-      width: 20px;
-      height: 20px;
-      background-image: url("http://www.mettalegal.com/wp-content/uploads/2013/01/menu-icon.png"); }
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/menu-icon.png");
+      background-repeat: no-repeat;
+      border: 0;
+      background-color: transparent;
+      background-size: cover;
+      display: none; }
     .navigetion .nav-wrapper-rigth .shell-search {
       display: block;
       float: left;
@@ -237,7 +242,13 @@
 
 @media screen and (max-width: 1025px) {
   .navigetion .nav-wrapper {
-    display: none; } }
+    display: none; }
+  .nav-wrapper-rigth .shell-search .shell-search-wrapper input {
+    display: none; }
+  .navigetion .nav-wrapper-rigth .shell-search .shell-search-wrapper button {
+    border-color: #fff; }
+  .navigetion .nav-wrapper-rigth .shell-search .shell-search-wrapper button {
+    display: block; } }
 
 .hero-dropBox {
   position: relative;
@@ -431,6 +442,10 @@
     float: left; }
   .footer-end .copyright {
     float: unset; } }
+
+@media screen and (min-width: 768px) {
+  .dropdown-apple {
+    display: block; } }
 
 @media screen and (max-width: 768px) {
   .apple-footer .colum ul li h3 {

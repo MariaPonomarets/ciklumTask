@@ -35,7 +35,7 @@ $dropdown-submenu: #D9D9D9;
     background-color: transparent;
     float: left;
     display: block;
-    
+
 
     .dropdown-content {
       display: none;
@@ -125,11 +125,20 @@ $dropdown-submenu: #D9D9D9;
     background-color: transparent;
     display: block;
     float: right;
-    .button-menu{
-      width:20px;
-      height:20px;
-      background-image:url('http://www.mettalegal.com/wp-content/uploads/2013/01/menu-icon.png')
+
+
+    .button-menu {
+      width: 30px;
+      height: 30px;
+      background-image: url('../img/menu-icon.png');
+      background-repeat: no-repeat;
+      border: 0;
+      background-color: transparent;
+      background-size: cover;
+      display:none;
     }
+
+
     .shell-search {
       display: block;
       float: left;
@@ -223,16 +232,25 @@ $dropdown-submenu: #D9D9D9;
       color: cornflowerblue;
     }
   }
-
 }
-.hide-elem{
-  display:none;
+
+.hide-elem {
+  display: none;
 }
 
 @media screen and (max-width: 1025px) {
- .navigetion .nav-wrapper {
+  .navigetion .nav-wrapper {
     display: none;
-    }
-    
-  
+  }
+
+  .nav-wrapper-rigth .shell-search .shell-search-wrapper input {
+    display: none;
+  }
+
+ .navigetion .nav-wrapper-rigth .shell-search .shell-search-wrapper button {
+    border-color: #fff;
+  }
+ .navigetion .nav-wrapper-rigth .shell-search .shell-search-wrapper button{
+   display:block;
+ }
 }

@@ -114,7 +114,12 @@
     }
   }
 }
-
+@media screen and (min-width:768px){
+  .dropdown-apple{
+    display:block;
+  
+  }
+}
 @media screen and (max-width:768px) {
   .apple-footer .colum ul li h3 {
     font-size: 13px;
