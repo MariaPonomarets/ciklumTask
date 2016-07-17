@@ -1,0 +1,175 @@
+﻿.apple-footer {
+  width: 100%;
+  padding-top: 32px;
+  font-size: 12px;
+  line-height: 1.66667;
+  font-weight: 400;
+  letter-spacing: normal;
+  background-color: #f2f2f2;
+  color: #666;
+  overflow: hidden;
+  position: relative;
+  font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+  margin: 0;
+
+  .footer-end {
+    color: #999;
+    padding: 20px 0 24px;
+
+    .underline-part {
+      border-bottom: 1px solid #e3e3e3;
+      padding-bottom: 5px;
+    }
+
+    .copyright {
+      margin-right: 26px;
+      float: left;
+    }
+
+    .copyright-links {
+      font-size: 11px;
+      border-right: 1px solid #d6d6d6;
+      text-decoration: none;
+      margin-right: 10px;
+      padding-right: 12px;
+      white-space: nowrap;
+      float: left;
+
+      a {
+        color: #666;
+      }
+    }
+
+    .languagle {
+      float: right;
+
+      img {
+        padding-bottom: 3px;
+      }
+
+      a {
+        color: #666;
+        font-size: 11px;
+        text-decoration: none;
+        padding: 0 12px 0 12px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .colum {
+    text-align: center;
+
+    .icon-plus {
+      float: right;
+      font-size: 1em;
+      display: none;
+    }
+
+    .second-ul {
+      padding-top: 20px;
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
+    ul li {
+      list-style: none;
+      text-align: left;
+
+      a {
+        color: #666;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      h3 {
+        font-size: 12px;
+        line-height: 1.66667;
+        font-weight: bold;
+        letter-spacing: normal;
+        color: #333;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .footer-end {
+    .languagle {
+      float: left;
+    }
+
+    .copyright {
+      float: unset;
+    }
+  }
+}
+@media screen and (min-width:768px){
+  .dropdown-apple{
+    display:block;
+  
+  }
+}
+@media screen and (max-width:768px) {
+  .apple-footer .colum ul li h3 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2.7;
+    border-bottom: 1px solid #e3e3e3;
+    font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+    letter-spacing: normal;
+  }
+
+  .apple-footer {
+    .colum {
+      .second-ul {
+        padding-top: 0px;
+      }
+
+      .icon-plus {
+        display: inline-block;
+        position: relative;
+        float: right;
+        font-weight: normal;
+        margin-right: 8px;
+        -webkit-transition: -webkit-transform .3s ease;
+        transition: transform .3s ease;
+
+        /*&:hover {
+          -webkit-transform: rotate(45deg) scale(1.08);
+          transform: rotate(45deg) scale(1.08);
+        }*/
+      }
+    }
+
+   
+  }
+
+  .dropdown-apple {
+    display: none;
+    ul li {
+      }
+  }
+   .apple-footer .colum ul li ul li{
+     padding: 0 14px;
+    display: block;
+    line-height: 3;
+
+   }
+   .rotate{
+      -webkit-transform: rotate(45deg) scale(1.08);
+          transform: rotate(45deg) scale(1.08);
+   }
+
+}
+
